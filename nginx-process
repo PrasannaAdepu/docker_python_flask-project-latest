@@ -57,13 +57,13 @@ Useful for generating proper redirects or absolute URLs in Flask.
 
 upstream flask_app {
     # Round-robin load balancing (default)
-    server 10.0.1.101:5000;
-    server 10.0.1.102:5000;
+    server 10.0.128.62:5000;
+    server 10.0.130.87:5000;
 }
 
 server {
     listen 80;
-    server_name yourdomain.com;  # or public IP
+    server_name 44.247.123.66;  # or public IP
 
     location / {
         proxy_pass http://flask_app;
@@ -91,8 +91,8 @@ server {
 You can add:
 
 #upstream flask_app {
-    server 10.0.1.101:5000 weight=2;  # 2x traffic goes here
-    server 10.0.1.102:5000;
+    server 10.0.128.62:5000 weight=2;  # 2x traffic goes here
+    server 10.0.130.87:5000;
 }
 
 =============================== Path based Example  ============================
