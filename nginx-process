@@ -8,10 +8,10 @@ add belwo config into this path
 
 server {
     listen 80;
-    server_name 98.81.160.29;
+    server_name 44.247.123.66;
 
     location / {
-        proxy_pass http://127.0.0.1:5000;
+        proxy_pass http://10.0.128.62:80;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
